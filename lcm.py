@@ -17,10 +17,14 @@ def generateRan(x0, a, c, m):
     x1 = (a*x0 + c)%m
     rand.append(x1)
     randr.append(x1/m)
+    i = 2
     while(x1!= x0):
         x1 = (a*x1 + c)%m
+        print('(X{} = x{}*a + c)%m'.format(i, i-1))
+        print('X{} = {}'.format(i, x1))
         rand.append(x1)
         randr.append(x1/m)
+        i+=1
 
     return rand, randr
 
